@@ -1,6 +1,12 @@
+
+
 <html>
 <head>
-  <script src="src/Thermostat.js"></script>
+
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+  <script type="text/javascript" src="interface.js"></script>
+  <script type="text/javascript" src="../src/Thermostat.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <style>
   h1 {
@@ -12,7 +18,7 @@
   h2 {
     font-family: 'Righteous';
     font-size: 20px;
-    text-align: left;
+    text-align: center;
   }
   .buttonUP {
     background-color: red;
@@ -55,6 +61,7 @@
     padding-bottom: 10px;
   }
 
+
   .temp {
     font-size: 150px;
   }
@@ -63,14 +70,18 @@
 
 </head>
 <body>
+
   <h1> Thermostat </h1>
+
+  <h2> Power save is On/Off </h2>
   <h1 class="temp">20</h1>
   <div class="button_div">
-  <button class="buttonUP">Warmer</button>
+  <button class="buttonUP" id="warm">Warmer</button>
   <button class="buttonDOWN">Cooler</button>
 </div>
 <div class="button_div">
   <button class="buttonSAVE">Power Save</button>
 </div>
+
 </body>
 </html>

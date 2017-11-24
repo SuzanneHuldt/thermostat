@@ -5,6 +5,7 @@ PSOFF_MAX = 32;
 
 function Thermostat(){
   this.temperature = DEFAULT_TEMP
+  this.powerSave
   this.maximum = PSON_MAX
 }
 
@@ -20,12 +21,12 @@ Thermostat.prototype.down = function(){
   }
 }
 
-Thermostat.prototype.powerSaveOff = function(){
-  this.maximum = PSOFF_MAX
-}
-
-Thermostat.prototype.powerSaveOn = function(){
-  this.maximum = PSON_MAX
+Thermostat.prototype.powerSaveSwitch = function(){
+  if (this.maximum == PSOFF_MAX) {
+    this.maximum = PSON_MAX
+  } else {
+    this.maximum = PSOFF_MAX
+  }
 }
 
 Thermostat.prototype.reset = function(){
