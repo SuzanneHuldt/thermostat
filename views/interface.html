@@ -3,7 +3,7 @@
 <html>
 <head>
 
-  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+  <script type="text/javascript" src='./jquery.js'></script>
   <script type="text/javascript" src="interface.js"></script>
   <script type="text/javascript" src="../src/Thermostat.js"></script>
 
@@ -62,8 +62,19 @@
   }
 
 
-  .temp {
+  .temp_high {
     font-size: 150px;
+    color:  ;
+  }
+
+  .temp_medium {
+    font-size: 150px;
+    color: ;
+  }
+
+  .temp_low{
+    font-size: 150px;
+    color: ;
   }
 
   </style>
@@ -73,8 +84,13 @@
 
   <h1> Thermostat </h1>
 
-  <h2> Power save is On/Off </h2>
-  <h1 class="temp">20</h1>
+  <h2 id ="On">Power Saving is On</h2>
+  <h2 id = "Off">Power Saving is Off</h2>
+
+  <h1 class="temp_high">20</h1>
+  <h1 class="temp_medium">20</h1>
+  <h1 class="temp_low">20</h1>
+
   <div class="button_div">
   <button class="buttonUP" id="warm">Warmer</button>
   <button class="buttonDOWN">Cooler</button>
